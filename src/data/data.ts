@@ -176,7 +176,7 @@ export const projectItems: ProjectItem[] = [
     description:
       'IELTS vocabulary platform featuring 1200+ English-Bengali words, progress tracking, spaced-repetition quizzes, timed practice, and custom vocabulary management with localStorage. Includes a personalized dashboard with daily goals, learning streaks, and mastery tracking for consistent vocabulary development.',
     tech: ['Next.js 14', 'TypeScript', 'Tailwind CSS'],
-    demo: 'https://vocabmaster-demo.vercel.app',
+    demo: 'https://vocab-master-smoky.vercel.app/',
   },
 ]
 
