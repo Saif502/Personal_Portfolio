@@ -15,22 +15,23 @@ import { navItems } from './data/data'
 
 type Theme = 'light' | 'dark'
 
+const getInitialTheme = (): Theme => {
+  if (typeof window === 'undefined') {
+    return 'dark'
+  }
+
+  const storedTheme = localStorage.getItem('theme')
+  return storedTheme === 'light' || storedTheme === 'dark' ? storedTheme : 'dark'
+}
+
 function App() {
-  const [theme, setTheme] = useState<Theme>('light')
+  const [theme, setTheme] = useState<Theme>(getInitialTheme)
   const [activeSection, setActiveSection] = useState('home')
 
   const observedSections = useMemo(
     () => Array.from(new Set(['home', ...navItems.map((item) => item.id), 'certifications'])),
     [],
   )
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem('theme') as Theme | null
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const initialTheme = storedTheme ?? (prefersDark ? 'dark' : 'light')
-    setTheme(initialTheme)
-    document.documentElement.classList.toggle('dark', initialTheme === 'dark')
-  }, [])
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark')

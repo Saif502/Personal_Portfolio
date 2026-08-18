@@ -58,6 +58,7 @@ export type ContactInfo = {
   location: string
   linkedin: string
   github: string
+  facebook: string
 }
 
 export const siteConfig = {
@@ -244,4 +245,5 @@ export const contactInfo: ContactInfo = {
   location: 'Barishal, Bangladesh',
   linkedin: 'https://www.linkedin.com/in/md-saifuzzaman-abhi-4a79a41a8/',
   github: 'https://github.com/Saif502',
+  facebook: 'https://www.facebook.com/md.saifuzzaman.abhi',
 }

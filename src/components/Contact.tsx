@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { Mail, MapPin, Phone } from 'lucide-react'
 import type { ReactNode } from 'react'
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa6'
+import { FaFacebookF, FaGithub, FaLinkedinIn } from 'react-icons/fa6'
 import { contactInfo } from '../data/data'
 import { SectionShell } from './SectionShell'
 
@@ -91,6 +91,15 @@ export function Contact() {
                 aria-label="GitHub"
               >
                 <FaGithub size={16} />
+              </a>
+              <a
+                href={contactInfo.facebook}
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-[var(--color-border)] p-3 text-[var(--color-text)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                aria-label="Facebook"
+              >
+                <FaFacebookF size={15} />
               </a>
             </div>
           </div>
